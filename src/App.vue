@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Aside :info="info"/>
+    <Maps/>
   </div>
 </template>
 

@@ -40,6 +40,7 @@ export default {
     }
 
     &__tel {
+        font-size: 14px;
         margin-top: 10px;
         span {
             margin-right: 10px;
