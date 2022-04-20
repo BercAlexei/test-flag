@@ -1,0 +1,188 @@
+{
+  "russia": {
+        "Moscow": [
+            {
+                "id": "1",
+                "office": "Офис в Москве",
+                "director": "Иванова Иван Иванович",
+                "tel": "+7 (123) 456-78-99",
+                "additional_tel": "+7 (123) 456-77-91",
+                "email": "test@mail.ru"
+            },
+            {
+                "id": "2",
+                "office": "Офис Москва Сити",
+                "director": "Иванова Иван Иванович",
+                "tel": "+7 (123) 456-78-99",
+                "additional_tel": "+7 (123) 456-77-91",
+                "email": "test@mail.ru"
+            }
+        ],
+        "St. Petersburg": [
+            {
+                "id": "1",
+                "office": "Офис в Санкт-Петербурге",
+                "director": "Иванова Иван Иванович",
+                "tel": "+7 (123) 456-78-99",
+                "additional_tel": "+7 (123) 456-77-91",
+                "email": "test@mail.ru"
+            },
+            {
+                "id": "2",
+                "office": "Офис Невский Центр",
+                "director": "Иванова Иван Иванович",
+                "tel": "+7 (123) 456-78-99",
+                "additional_tel": "+7 (123) 456-77-91",
+                "email": "test@mail.ru"
+            }
+        ],
+
+        "Yekaterinburg": [
+            {
+                "id": "1",
+                "office": "Офис в Екатеринбурге",
+                "director": "Иванова Иван Иванович",
+                "tel": "+7 (123) 456-78-99",
+                "additional_tel": "+7 (123) 456-77-91",
+                "email": "test@mail.ru"
+            },
+            {
+                "id": "2",
+                "office": "Офис в Высоцком",
+                "director": "Иванова Иван Иванович",
+                "tel": "+7 (123) 456-78-99",
+                "additional_tel": "+7 (123) 456-77-91",
+                "email": "test@mail.ru"
+            }
+        ],
+        "Tyumen":[
+            {
+                "id": "1",
+                "office": "Офис в Тюмени",
+                "director": "Иванова Иван Иванович",
+                "tel": "+7 (123) 456-78-99",
+                "additional_tel": "+7 (123) 456-77-91",
+                "email": "test@mail.ru"
+            },
+            {
+                "id": "2",
+                "city": "Tyumen",
+                "office": "Офис БЦ Аврора",
+                "director": "Иванова Иван Иванович",
+                "tel": "+7 (123) 456-78-99",
+                "additional_tel": "+7 (123) 456-77-91",
+                "email": "test@mail.ru"
+            }
+        ],
+        "Chelyabinsk": [
+            {
+                "id": "1",
+                "office": "Офис в Челябинске",
+                "director": "Иванова Иван Иванович",
+                "tel": "+7 (123) 456-78-99",
+                "additional_tel": "+7 (123) 456-77-91",
+                "email": "test@mail.ru"
+            },
+            {
+                "id": "2",
+                "office": "Офис Челябинск-Сити",
+                "director": "Иванова Иван Иванович",
+                "tel": "+7 (123) 456-78-99",
+                "additional_tel": "+7 (123) 456-77-91",
+                "email": "test@mail.ru"
+            }
+        ]
+    },
+  "belarus": {
+      "Minsk": [
+            {
+                "id": "1",
+                "office": "Офис в Минске",
+                "director": "Иванова Иван Иванович",
+                "tel": "+7 (123) 456-78-99",
+                "additional_tel": "+7 (123) 456-77-91",
+                "email": "test@mail.ru"
+            },
+            {
+                "id": "2",
+                "office": "Офис Минске",
+                "director": "Иванова Иван Иванович",
+                "tel": "+7 (123) 456-78-99",
+                "additional_tel": "+7 (123) 456-77-91",
+                "email": "test@mail.ru"
+            }
+        ],
+        "Gomel": [
+            {
+                "id": "1",
+                "office": "Офис в Гомеле",
+                "director": "Иванова Иван Иванович",
+                "tel": "+7 (123) 456-78-99",
+                "additional_tel": "+7 (123) 456-77-91",
+                "email": "test@mail.ru"
+            },
+            {
+                "id": "2",
+                "office": "Офис Гомеле",
+                "director": "Иванова Иван Иванович",
+                "tel": "+7 (123) 456-78-99",
+                "additional_tel": "+7 (123) 456-77-91",
+                "email": "test@mail.ru"
+            } 
+        ],
+        "Vitebsk": [
+            {
+                "id": "1",
+                "office": "Офис в Витебске",
+                "director": "Иванова Иван Иванович",
+                "tel": "+7 (123) 456-78-99",
+                "additional_tel": "+7 (123) 456-77-91",
+                "email": "test@mail.ru"
+            },
+            {
+                "id": "2",
+                "office": "Офис в Витебске",
+                "director": "Иванова Иван Иванович",
+                "tel": "+7 (123) 456-78-99",
+                "additional_tel": "+7 (123) 456-77-91",
+                "email": "test@mail.ru"
+            }
+        ],
+        "Mogilev": [
+            {
+                "id": "1",
+                "office": "Офис в Могилёве",
+                "director": "Иванова Иван Иванович",
+                "tel": "+7 (123) 456-78-99",
+                "additional_tel": "+7 (123) 456-77-91",
+                "email": "test@mail.ru"
+            },
+            {
+                "id": "2",
+                "office": "Офис в Могилёве",
+                "director": "Иванова Иван Иванович",
+                "tel": "+7 (123) 456-78-99",
+                "additional_tel": "+7 (123) 456-77-91",
+                "email": "test@mail.ru"
+            }
+        ],
+        "Grodno": [
+            {
+                "id": "1",
+                "office": "Офис в Гродно",
+                "director": "Иванова Иван Иванович",
+                "tel": "+7 (123) 456-78-99",
+                "additional_tel": "+7 (123) 456-77-91",
+                "email": "test@mail.ru"
+            },
+            {
+                "id": "2",
+                "office": "Офис Гродно",
+                "director": "Иванова Иван Иванович",
+                "tel": "+7 (123) 456-78-99",
+                "additional_tel": "+7 (123) 456-77-91",
+                "email": "test@mail.ru"
+            }
+        ]
+    }
+}
