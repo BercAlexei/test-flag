@@ -1,72 +1,61 @@
 <template>
   <div class="aside">
       <div class="aside__contry">
-            <Country 
-            v-for="(item, country, index) in info" 
-            :key="index"
-            :index="index"
-            :city="item"
-            :nameCountry="countryName[index]"
-            :active="activeTab"
-            @active="activeChange($event)"/>
-
+        <div class="label" v-for="(country, index) in country" :key="index">
+            <input type="radio" :id="index" :value="index" v-model="filter">
+            <label :for="index">{{ country }}</label>
+        </div>
       </div>
-    <div class="aside__city" v-if="activeTab === 0">
-        <City v-for="(item, i, index) in info.russia"
-        :office="item"
-        :key="index"
-        :index="index"
-        :active="activeCityRussia"
-        @active="activeCityRussiaChange($event)"
-        :city="russiaCity[index]"/>
-    </div>
 
-    <div class="aside__city" v-if="activeTab === 1">
-        <City v-for="(item, nameCity, index) in info.belarus"
-        :office="item"
+    <div class="aside__city">
+        <City v-for="(item, index) in newArr"
+        :office="item.offices"
         :key="index"
-        :city="belarusCity[index]"
-        :index="index"
-        :active="activeCityBelarus"
-        @active="activeCityBelarusChange($event)"/>
+        :index="item.name"
+        :city="item.name"
+        :active="activeCity"
+        @active="activeCityChange($event)"/>
     </div>
   </div>
 </template>
 
 <script>
-import Country from "./country.vue";
 import City from './city.vue';
 
 export default {
     components: {
-        Country,
         City
     },    
-    data() {
-        return {
-            activeTab: 0,
-            activeCityRussia: 0,
-            activeCityBelarus: 0,
-            countryName: ["Россия", "Беларусь"],
-            russiaCity: ["Москва", "Санкт-Петербург", "Екатеринбург", "Тюмень", "Челябинск" ],
-            belarusCity: ["Минск", "Гомель", "Витебск", "Могилёв", "Гродно"]
-        };
-    },
     props: {
         info: {
             require: true,
-            type: Object
+            type: Array
+        }
+    },
+    data() {
+        return {
+            filter: 0,
+            activeCity: "Москва",
+            country: ["Россия", "Беларусь"]
+        };
+    },
+    computed: {
+        newArr() {
+            let newArray =  JSON.parse(JSON.stringify(this.info));
+            switch(true) {
+                case(this.filter === 0):
+                    return newArray.filter(item => item.country === "Russia")
+                case(this.filter === 1):
+                    return newArray.filter(item => item.country === "Belarus")
+            }
         }
     },
     methods: {
         activeChange(event) {
-            this.activeTab = event
+            this.filter = event
         },
-        activeCityRussiaChange(event) {
-            this.activeCityRussia = event
-        },
-        activeCityBelarusChange(event) {
-            this.activeCityBelarus = event
+        activeCityChange(event) {
+            this.activeCity = event
         }
     }
 }
@@ -83,6 +72,30 @@ export default {
     }
     &__city {
         padding: 50px 30px;
+    }
+}
+.label {
+    width: 100%;
+
+    label {
+        display: inline-block;
+        color: #929292;
+        font-size: 16px;
+        padding: 5px 0;
+        cursor: pointer;
+        width: 100%;
+        border: 1px solid #929292;
+        transition: all .3s;
+    }
+    input {
+        display: none;
+        appearance: none;
+        &:checked + label {
+            color: white;
+            font-weight: bold;
+            background: #FF9E00;
+            border: 1px solid #FF9E00;
+        }
     }
 }
 </style>
