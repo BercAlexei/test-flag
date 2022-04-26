@@ -22,8 +22,8 @@ export default {
     props: {
         city: String,
         office: Array,
-        index: String,
-        active: String
+        index: Number,
+        active: Number
     },
     methods: {
         toggle() {

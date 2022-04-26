@@ -2,16 +2,16 @@
   <div class="aside">
       <div class="aside__contry">
         <div class="label" v-for="(country, index) in country" :key="index">
-            <input type="radio" :id="index" :value="index" v-model="filter">
+            <input type="radio" :id="index" :value="index" v-model="filter" @change="changeCountry()">
             <label :for="index">{{ country }}</label>
         </div>
       </div>
 
     <div class="aside__city">
-        <City v-for="(item, index) in newArr"
+        <City v-for="item in newArr"
         :office="item.offices"
-        :key="index"
-        :index="item.name"
+        :key="item.id"
+        :index="item.id"
         :city="item.name"
         :active="activeCity"
         @active="activeCityChange($event)"/>
@@ -35,7 +35,7 @@ export default {
     data() {
         return {
             filter: 0,
-            activeCity: "Москва",
+            activeCity: 0,
             country: ["Россия", "Беларусь"]
         };
     },
@@ -56,7 +56,20 @@ export default {
         },
         activeCityChange(event) {
             this.activeCity = event
+        },
+        changeCountry() {
+            this.$root.$emit('changeMarkers', this.filter)
         }
+    },
+    mounted() {
+        this.$root.$on('openAccordion', event => {
+            this.activeCity = event;           
+            if(this.activeCity > 4) {
+                this.filter = 1
+            } else {
+                this.filter = 0
+            };
+        })
     }
 }
 </script>
